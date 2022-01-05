@@ -54,14 +54,17 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 //CODE HERE
 
 // const canWeDeliver = (zipCode) => {
-//     let status = "Sorry, we can't deliver to that address"
-//     for( let i = 0; i = deliveryAreaZipCodes.length; i++){
-//         let zip = zipCode[i]
+//     for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+//         let zip = deliveryAreaZipCodes[i]
+//         console.log(zip)
 //         if (zip === zipCode){
-//             status = `You're in our delivery zone!`
+//             return `You're in our delivery zone!`
+//         }else{
+//             return "Sorry, we can't deliver to that address"
 //         }
 //         }
 //     }
+// console.log(canWeDeliver(85205))
 
 
 // console.log(canWeDeliver(`85205`))
@@ -85,16 +88,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 // CODE HERE
 
-const canWeDeliverTwo = (zipCode) => {
-    if(zipCode.includes(`85205` || `85204` || `85203` || `85213` || `85206`)){
-            console.log(`You're in our delivery zone!`)
-        }
-        else{
-            console.log(`Sorry, we can't deliver to that address`)
-        }
-    }
+// const canWeDeliverTwo = (zipCode) => {
+//     if(zipCode.includes(`85205` || `85204` || `85203` || `85213` || `85206`)){
+//             console.log(`You're in our delivery zone!`)
+//         }
+//         else{
+//             console.log(`Sorry, we can't deliver to that address`)
+//         }
+//     }
 
-canWeDeliverTwo(`84606`)
+// canWeDeliverTwo(`84606`)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -115,10 +118,10 @@ const deals = [
         title: '15% Off!', 
         desc: 'Applied to your entire order when you spend $30 or more'
     }, 
-//     {
-//         title: 'Free Kids Meal with 2 Regular Entrees', 
-//         desc: '   This deal lasts until the end of March! '
-//     }
+    {
+        title: 'Free Kids Meal with 2 Regular Entrees', 
+        desc: '   This deal lasts until the end of March! '
+    }
 ]
 
 /*
@@ -131,14 +134,8 @@ const deals = [
 */
 
 //CODE HERE
-
-// deals[1].title = `10% off!`
-
-const newTitle1 = deals.title.replaceAll(`15%`, `10%`)
-console.log(deals)
-
-
-
+deals[0].title = deals[0].title.replace("15%","10")
+// console.log(deals)
 
 /*
     The restaurant is going to continue its
@@ -155,3 +152,5 @@ console.log(deals)
 
 //CODE HERE
 
+deals[1].desc = deals[1].desc.replace("March", "April")
+console.log(deals)
