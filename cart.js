@@ -35,7 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const summedPrice = cart.reduce((acc, item) => {
+    return acc + item.price
+}, 0)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -53,9 +55,10 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
-
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    const result = (cartTotal * (1 + tax)) - couponValue
+    return result
+}
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -78,7 +81,7 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    first and last names as strings, phone number as a string, an email as a string, and age as an interger. I chose string for most of them because they can't change value type. A customer could move to a different country where they would have a different length phone number than here, so I left it as a string to keep it flexible in that regard. I made the age an interger in case someone wanted to run a report on customer ages.
 
 */
 
@@ -87,4 +90,10 @@ const cart = [
     guidelines.
 */
 
-//CODE HERE
+const customer = {
+    firstName: "John",
+    lastName: "Doe",
+    phoneNumber: "555-444-3321",
+    email: "datJohnDoe@email.com",
+    Age: 50
+}
